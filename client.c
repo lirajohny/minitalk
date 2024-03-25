@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlira <jlira@student.42.rio>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/25 11:56:48 by jlira             #+#    #+#             */
+/*   Updated: 2024/03/25 11:59:26 by jlira            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 int	ft_atoi(const char *nptr)
@@ -45,9 +57,9 @@ void	char_to_bit(int pid, char c)
 
 int	main(int ac, char **av)
 {
-	char *str;
-	int	i;
-	int	pid;
+	char	*str;
+	int		i;
+	int		pid;
 
 	if (ft_atoi(av[1]) <= 0)
 		write(1, "ERROR: Wrong pid. Please try again.\n", 35);

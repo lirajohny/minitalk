@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlira <jlira@student.42.rio>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/25 11:56:39 by jlira             #+#    #+#             */
+/*   Updated: 2024/03/25 11:58:47 by jlira            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 void	bit_to_char(int sign)
@@ -21,10 +33,12 @@ void	bit_to_char(int sign)
 
 int	main(void)
 {
-	write(STDOUT_FILENO, "MINITALK\n", 9);
-	int		process_id = getpid();
+	int		process_id;
 	char	*str;
 	int		len;
+
+	process_id = get_pid();
+	write(STDOUT_FILENO, "MINITALK\n", 9);
 	write(STDOUT_FILENO, "PID: ", 5);
 	str = ft_itoa(process_id);
 	len = str_len(str);
