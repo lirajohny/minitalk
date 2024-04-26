@@ -6,7 +6,7 @@
 /*   By: jlira <jlira@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 11:56:39 by jlira             #+#    #+#             */
-/*   Updated: 2024/03/25 11:58:47 by jlira            ###   ########.fr       */
+/*   Updated: 2024/04/25 13:33:13 by jlira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(void)
 	char	*str;
 	int		len;
 
-	process_id = get_pid();
+	process_id = getpid();
 	write(STDOUT_FILENO, "MINITALK\n", 9);
 	write(STDOUT_FILENO, "PID: ", 5);
 	str = ft_itoa(process_id);
